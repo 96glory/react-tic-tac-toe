@@ -149,7 +149,7 @@ class Game extends React.Component {
       return;
     }
 
-    squares[i] = this.props.xIsNext ? "X" : "O";
+    squares[i] = this.state.xIsNext ? "X" : "O";
     this.setState({
       history: history.concat([
         {
@@ -157,7 +157,7 @@ class Game extends React.Component {
         },
       ]),
       stepNumber: history.length,
-      xIsNext: !this.props.xIsNext,
+      xIsNext: !this.state.xIsNext,
     });
   }
 
